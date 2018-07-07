@@ -51,4 +51,3 @@ data4<-miss_var_summary(southasian.case.missing)
 data4[c(6,8:16,50:52),]
 data4 %>% View()
 str(southasian.case.missing)
-write.csv(data4,file="data4",row.names = FALSE)
