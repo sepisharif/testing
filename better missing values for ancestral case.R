@@ -52,11 +52,3 @@ data4[c(6,8:16,50:52),]
 data4 %>% View()
 str(southasian.case.missing)
 write.csv(data4,file="data4",row.names = FALSE)
-sub.PCA.case6<-subset(data60, Ourcase %in% c("Polynesian"),value=TRUE)
-write.table(sub.PCA.case6,"~/Desktop/polynesian.case.txt",sep="\t",row.names = FALSE,quote = FALSE)
-polynesian.case.missing<-read.delim("polynesian.case.txt", header=T,na.strings = c(""," ","NA") )
-dim(polynesian.case.missing)
-data6<-miss_var_summary(polynesian.case.missing)
-data6[c(4,7:20,50:52),]
-data6 %>% View()
-str(polynesian.case.missing)
