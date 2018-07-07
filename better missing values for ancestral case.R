@@ -48,10 +48,10 @@ write.table(sub.PCA.case4,"~/Desktop/southasian.case.txt",sep="\t",row.names = F
 southasian.case.missing<-read.delim("southasian.case.txt", header=T,na.strings = c(""," ","NA") )
 dim(southasian.case.missing)
 data4<-miss_var_summary(southasian.case.missing)
-data4[c(6,8:16,18:22,50:52),]
+data4[c(6,8:16,50:52),]
 data4 %>% View()
 str(southasian.case.missing)
-
+write.csv(data4,file="data4",row.names = FALSE)
 sub.PCA.case6<-subset(data60, Ourcase %in% c("Polynesian"),value=TRUE)
 write.table(sub.PCA.case6,"~/Desktop/polynesian.case.txt",sep="\t",row.names = FALSE,quote = FALSE)
 polynesian.case.missing<-read.delim("polynesian.case.txt", header=T,na.strings = c(""," ","NA") )
